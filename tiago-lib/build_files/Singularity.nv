@@ -1,0 +1,15 @@
+Bootstrap: docker
+From: ubuntu:16.04
+#xenial-20190222
+
+%files
+  build_files/files/00sshd /00sshd
+  build_files/files/sources.list /sources.list
+  build_files/scripts /scripts
+  build_files/pkgs /pkgs
+
+%post
+  /scripts/postscript_initial.sh
+
+%runscript
+  exec /bin/bash "$@" --rcfile /scripts/runscript.sh

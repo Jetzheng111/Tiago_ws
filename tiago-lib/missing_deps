@@ -1,0 +1,57 @@
+#missing
+  Depends: ros-kinetic-costmap-2d
+  Depends: ros-kinetic-cv-bridge
+  Depends: ros-kinetic-find-object-2d
+  Depends: ros-kinetic-move-base-msgs
+  Depends: ros-kinetic-rtabmap
+  Depends: ros-kinetic-stereo-msgs
+  Depends: libqt5gui5-gles (>= 5.0.2)
+ 
+ 
+ 
+ # have
+ Depends: libboost-filesystem1.58.0
+  Depends: libboost-system1.58.0
+  Depends: libboost-thread1.58.0
+  Depends: libc6 (>= 2.14)
+  Depends: libconsole-bridge0.2v5
+  Depends: libgcc1 (>= 1:3.0)
+  Depends: libogre-1.9.0v5
+  Depends: libpcl-common1.7
+  Depends: libpcl-filters1.7
+  Depends: libpcl-recognition1.7
+  Depends: libpcl-segmentation1.7
+  Depends: libqt5core5a (>= 5.0.2)
+ |Depends: libqt5gui5 (>= 5.0.2)
+  Depends: libqt5widgets5 (>= 5.0.2)
+  Depends: libstdc++6 (>= 5.2)
+  Depends: libtinyxml2-2v5 (>= 2.0.2)
+
+
+  Depends: ros-kinetic-class-loader
+  Depends: ros-kinetic-compressed-depth-image-transport
+  Depends: ros-kinetic-compressed-image-transport
+  Depends: ros-kinetic-dynamic-reconfigure
+  Depends: ros-kinetic-eigen-conversions
+  Depends: ros-kinetic-geometry-msgs
+  Depends: ros-kinetic-image-geometry
+  Depends: ros-kinetic-image-transport
+  Depends: ros-kinetic-laser-geometry
+  Depends: ros-kinetic-message-filters
+  Depends: ros-kinetic-message-runtime
+  Depends: ros-kinetic-nodelet
+  Depends: ros-kinetic-nav-msgs
+  Depends: ros-kinetic-opencv3
+  Depends: ros-kinetic-octomap-msgs
+  Depends: ros-kinetic-pcl-conversions
+  Depends: ros-kinetic-pcl-ros
+  Depends: ros-kinetic-roscpp
+  Depends: ros-kinetic-rospy
+  Depends: ros-kinetic-rviz
+  Depends: ros-kinetic-sensor-msgs
+  Depends: ros-kinetic-std-msgs
+  Depends: ros-kinetic-std-srvs
+  Depends: ros-kinetic-tf
+  Depends: ros-kinetic-tf-conversions
+  Depends: ros-kinetic-tf2-ros
+  Depends: ros-kinetic-visualization-msgs

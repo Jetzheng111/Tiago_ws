@@ -1,0 +1,28 @@
+auto lo
+iface lo inet loopback
+
+auto br0
+iface br0 inet static
+    bridge_ports eth0 eth1
+    address 10.68.0.1
+    subnet 255.255.255.0
+    gateway 10.68.0.200
+
+auto wlan0
+iface wlan0 inet static
+    address 192.168.0.30
+    subnet 255.255.255.0
+    wireless-essid Robotics_WIFI
+    wireless-mode managed
+
+auto can0
+iface can0 can static
+    bitrate 1000000
+    up /sbin/ip link set $IFACE down
+    up /sbin/ip link set $IFACE up txqueuelen 1000 type can bitrate 1000000
+
+auto can1
+iface can1 can static
+    bitrate 1000000
+    up /sbin/ip link set $IFACE down
+    up /sbin/ip link set $IFACE up txqueuelen 1000 type can bitrate 1000000

@@ -1,0 +1,9 @@
+Acquire::https::archive.pal-robotics.com {
+    Verify-Peer "true";
+    Verify-Host "true";
+
+    CaInfo "/etc/ssl/certs/Pal_Robotics_CA.pem";
+
+    SslCert "/etc/ssl/pal/tiago.crt";
+    SslKey  "/etc/ssl/pal/tiago.key";
+};

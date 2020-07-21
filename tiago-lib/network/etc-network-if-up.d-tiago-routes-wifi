@@ -1,0 +1,13 @@
+#!/bin/bash
+
+MY_INTERNET_DEVICE=
+MY_TIAGO_DEVICE=wlp2s0
+
+if [ "$IFACE" == "$MY_TIAGO_DEVICE" ] && [ "$ADDRFAM" == "inet" ]; then
+  if hostname -I | grep -qE '192\.168\.0\.[0-9]+' && ! ip route show | grep -qe "10.68.0.0/24 via 192.168.0.30 dev $MY_TIAGO_DEVICE"; then
+    ip route add 10.68.0.0/24 via 192.168.0.30 dev $MY_TIAGO_DEVICE
+  fi
+  if [ ! -z "$MY_INTERNET_DEVICE" ] && ! iptables -t nat -S | grep -qe "-A POSTROUTING -s 10.68.0.0/24 -o $MY_INTERNET_DEVICE -j MASQUERADE"; then
+    iptables -t nat -A POSTROUTING -s 10.68.0.0/24 -o $MY_INTERNET_DEVICE -j MASQUERADE
+  fi
+fi
